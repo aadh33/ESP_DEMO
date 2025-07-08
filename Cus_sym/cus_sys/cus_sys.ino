@@ -69,13 +69,13 @@ void loop() {
   lastSW6State = sw6State;
 
   // Red LED 10Hz
-  if (red_on && now - lastRedToggle >= 100) {
+  if (red_on && now - lastRedToggle >= 50) {
     lastRedToggle = now;
     digitalWrite(RED_LED, !digitalRead(RED_LED));
   }
 
   // Green LED 2Hz
-  if (green_on && now - lastGreenToggle >= 500) {
+  if (green_on && now - lastGreenToggle >= 250) {
     lastGreenToggle = now;
     digitalWrite(GREEN_LED, !digitalRead(GREEN_LED));
   }
